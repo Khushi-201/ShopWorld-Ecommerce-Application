@@ -1,0 +1,2 @@
+ALTER TABLE users
+    ADD COLUMN contactNo VARCHAR(50) NOT NULL;

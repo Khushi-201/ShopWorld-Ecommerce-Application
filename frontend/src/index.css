@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg text-ink font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-ink;
+  }
+
+  :focus-visible {
+    outline: 2px solid #154d44;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Signature element: mono "price tag" chip used for prices, order IDs, SKUs */
+  .price-tag {
+    @apply inline-flex items-center gap-1 rounded-sm bg-primary/5 px-2 py-1
+      font-mono text-sm font-medium text-primary-dark;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2
+      text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-light;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent text-ink hover:bg-accent-light;
+  }
+
+  .btn-outline {
+    @apply btn border border-border bg-surface text-ink hover:bg-bg;
+  }
+
+  .card {
+    @apply rounded-lg border border-border bg-surface;
+  }
+
+  .input {
+    @apply w-full rounded-md border border-border bg-surface px-3 py-2 text-sm
+      text-ink placeholder:text-muted focus:border-primary focus:outline-none;
+  }
+}

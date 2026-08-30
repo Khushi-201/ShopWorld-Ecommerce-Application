@@ -1,0 +1,4 @@
+
+
+ALTER TABLE orders
+    ADD COLUMN status VARCHAR(20) NOT NULL DEFAULT 'CREATED' AFTER user_id;
